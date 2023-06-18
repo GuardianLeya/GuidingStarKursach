@@ -8,13 +8,204 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PlayerPage">
 
-    <Grid Background="White">
-        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Height="51" Margin="10,29,0,0" VerticalAlignment="Top" Width="80" Click="Back_Click"/>
+    <Grid Background="#8b8bae">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="10" HorizontalAlignment="Left" Background="#24212d" Height="Auto" Width="200"/>
+        <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="1" Width="170" Height="160" Background="#24212d">
+            <Border.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Border.Resources>
+        </Border>
+
+        <Button x:Name="profile" Content="Profile  " HorizontalContentAlignment="Right" Grid.Row="1" Grid.Column="1" Height="50" Width="158" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="profile_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <Button x:Name="back" Content="Back" Grid.Row="3" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="back_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="attacks" Content="Atacks" Grid.Row="4" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="attacks_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="inventory" Content="Invenory" Grid.Row="5" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="inventory_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="bio" Content="Biography" Grid.Row="6" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="bio_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <Button x:Name="dices" Content="Dices" Grid.Row="7" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="dices_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="rules" Content="Rules" Grid.Row="8" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="rules_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Image x:Name="asset_images" Grid.Row="1" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="1" Width="160" Height="150"/>
+
+
+        <ListView x:Name="mainstat" Grid.Row="1" Grid.Column="5" Grid.RowSpan="3" Grid.ColumnSpan="1" Height="160" Width="170" FontSize="16"  Background="#dc7557"  Foreground="#e4fffe">
+            <ListView.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ListView.Resources>
+        </ListView>
+
+
+        <ListView x:Name="stat1" Grid.Row="4" Grid.Column="3" Grid.RowSpan="5" Grid.ColumnSpan="1" Height="240" Width="170" FontSize="16"  Background="#88d9e6"  Foreground="#24212d">
+            <ListView.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Stat" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="LVL" Width="40" DisplayMemberBinding="{Binding Age}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView x:Name="stats2" Grid.Row="4" Grid.Column="5" Grid.RowSpan="5" Grid.ColumnSpan="1" Height="240" Width="170" FontSize="16"  Background="#88d9e6"  Foreground="#24212d">
+            <ListView.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </ListView.Resources>
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Stat" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="LVL" Width="40" DisplayMemberBinding="{Binding Age}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="d4" Content="D4" Grid.Row="2" Grid.Column="7" Height="42" Width="42" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d6" Content="D6" Grid.Row="3" Grid.Column="7" Height="42" Width="42" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d8" Content="D8" Grid.Row="4" Grid.Column="7" Height="42" Width="42" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d10" Content="D10" Grid.Row="5" Grid.Column="7" Height="42" Width="42" FontSize="18" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="d12" Content="D12" Grid.Row="6" Grid.Column="7" Height="42" Width="42" FontSize="18" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d20" Content="D20" Grid.Row="7" Grid.Column="7" Height="42" Width="42" FontSize="18" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <TextBox Grid.Row="1" Grid.Column="8" FontSize="24" FontWeight="Bold" Background="Transparent" VerticalContentAlignment="Bottom" Height="50" Width="140">Notes</TextBox>
+        <TextBox x:Name="notes" Grid.Row="2" Grid.Column="8" Grid.RowSpan="7" Grid.ColumnSpan="1" Height="340" Width="150" FontSize="16"  Background="#e4fffe"  Foreground="#24212d">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+    </Grid>
+</Page>
+
+<!--<Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Height="51" Margin="10,29,0,0" VerticalAlignment="Top" Width="80" Click="Back_Click"/>
         <Button x:Name="Attacks" Content="Attacks" HorizontalAlignment="Left" Height="70" Margin="10,85,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click"/>
         <Button x:Name="Inventory" Content="Inventory" HorizontalAlignment="Left" Height="77" Margin="10,160,0,0" VerticalAlignment="Top" Width="80" Click="Inventory_Click"/>
         <Button Content="Biography" HorizontalAlignment="Left" Height="45" Margin="10,244,0,0" VerticalAlignment="Top" Width="80"/>
         <Button Content="Dices" HorizontalAlignment="Left" Height="51" Margin="10,294,0,0" VerticalAlignment="Top" Width="80"/>
         <Button Content="Rules" HorizontalAlignment="Left" Height="45" Margin="10,350,0,0" VerticalAlignment="Top" Width="80"/>
 
-    </Grid>
-</Page>
+    </Grid>-->

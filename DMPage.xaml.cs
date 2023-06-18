@@ -30,5 +30,35 @@ namespace GuidingStarKursach
             NavigationService.Navigate(new PageOfChange());
         }
 
-        
+        private void profile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void assets_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void npc_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void lore_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void dices_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void rules_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void dice_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+    }
 }

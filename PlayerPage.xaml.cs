@@ -25,7 +25,11 @@ namespace GuidingStarKursach
             InitializeComponent();
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void profile_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+        private void back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new PageOfChange());
         }
@@ -35,7 +39,32 @@ namespace GuidingStarKursach
             NavigationService.Navigate(new Attacks());
         }
 
-        private void Inventory_Click(object sender, RoutedEventArgs e)
+        private void attacks_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+
+        private void inventory_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+
+        private void bio_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+
+        private void dices_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+
+        private void rules_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Inventory());
+        }
+
+        private void dice_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Inventory());
         }

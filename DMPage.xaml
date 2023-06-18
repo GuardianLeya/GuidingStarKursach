@@ -8,23 +8,175 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DMPage">
 
-    <Grid Background="Wheat">
-        <Button x:Name="back" Content="Back" HorizontalAlignment="Left" Height="59" Margin="10,10,0,0" VerticalAlignment="Top" Width="90" Click="back_Click" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="-0.996"/>
-                    <RotateTransform Angle="0.617"/>
-                    <TranslateTransform Y="-0.983"/>
-                </TransformGroup>
-            </Button.RenderTransform>
+    <Grid Background="#8b8bae">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="15"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="10" HorizontalAlignment="Left" Background="#24212d" Height="Auto" Width="200"/>
+        <Border Grid.Row="1" Grid.Column="3" Grid.RowSpan="4" Grid.ColumnSpan="4" Width="380" Height="210" Background="#24212d">
+            <Border.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Border.Resources>
+        </Border>
+
+        <Button x:Name="profile" Content="Profile  " HorizontalContentAlignment="Right" Grid.Row="1" Grid.Column="1" Height="50" Width="158" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="profile_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
         </Button>
-        <ComboBox HorizontalAlignment="Left" Height="37" Margin="10,86,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button Content="Assets" HorizontalAlignment="Left" Height="38" Margin="10,140,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button Content="NPC" HorizontalAlignment="Left" Height="42" Margin="10,198,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button Content="Dices" HorizontalAlignment="Left" Height="49" Margin="10,264,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button Content="Lore" HorizontalAlignment="Left" Height="40" Margin="10,341,0,0" VerticalAlignment="Top" Width="89"/>
-        <Button Content="Rules" HorizontalAlignment="Left" Height="39" Margin="10,401,0,0" VerticalAlignment="Top" Width="89"/>
+
+        <ComboBox x:Name="players_list" Grid.Row="2" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae" Foreground="#e4fffe">
+            <ComboBox.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#88d9e6"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#24212d"/>
+            </ComboBox.Resources>
+        </ComboBox>
+        <Button x:Name="back" Content="Back" Grid.Row="3" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="back_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="assets" Content="Assets" Grid.Row="4" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="assets_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="npc" Content="NPC" Grid.Row="5" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="npc_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="lore" Content="Lore" Grid.Row="6" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="lore_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <Button x:Name="dices" Content="Dices" Grid.Row="7" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="dices_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="rules" Content="Rules" Grid.Row="8" Grid.Column="1" Height="35" Width="158" FontSize="24" FontWeight="Bold" Background="#8b8bae"  Foreground="#e4fffe" Click="rules_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Image x:Name="asset_images" Grid.Row="1" Grid.Column="3" Grid.RowSpan="4" Grid.ColumnSpan="4" Width="360" Height="200"/>
+
+        <ListView x:Name="chars" Grid.Row="5" Grid.Column="3" Grid.RowSpan="4" Grid.ColumnSpan="4" Height="190" Width="380" FontSize="16"  Background="#88d9e6"  Foreground="#24212d">
+            <ListView.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Character" Width="320" DisplayMemberBinding="{Binding Character}"/>
+                    <GridViewColumn Header="HP" Width="60" DisplayMemberBinding="{Binding HP}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="d4" Content="D4" Grid.Row="2" Grid.Column="7" Height="42" Width="42" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d6" Content="D6" Grid.Row="3" Grid.Column="7" Height="42" Width="42" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d8" Content="D8" Grid.Row="4" Grid.Column="7" Height="42" Width="42" FontSize="24" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d10" Content="D10" Grid.Row="5" Grid.Column="7" Height="42" Width="42" FontSize="18" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="d12" Content="D12" Grid.Row="6" Grid.Column="7" Height="42" Width="42" FontSize="18" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="d20" Content="D20" Grid.Row="7" Grid.Column="7" Height="42" Width="42" FontSize="18" FontWeight="Bold" Background="#dc7557"  Foreground="#e4fffe" Click="dice_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <TextBox Grid.Row="1" Grid.Column="8" FontSize="24" FontWeight="Bold" Background="Transparent" VerticalContentAlignment="Bottom" Height="50" Width="140">Notes</TextBox>
+                <TextBox x:Name="notes" Grid.Row="2" Grid.Column="8" Grid.RowSpan="7" Grid.ColumnSpan="1" Height="340" Width="150" FontSize="16"  Background="#e4fffe"  Foreground="#24212d">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
 
     </Grid>
 </Page>
